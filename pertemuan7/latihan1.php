@@ -12,7 +12,7 @@ Kamis, 11 Februari 2021
 ---------------------------
 Pemrograman Web
 ---------------------------
-Pertemuan 6 - Array Associative
+Pertemuan 7 - GET & POST
 ---------------------------
 */
 
@@ -20,45 +20,31 @@ Pertemuan 6 - Array Associative
 
 <?php 
 
-/* 
+/*
 ---------------------------
-Array Associative
-Keynya adalah string yang dibuat sendiri
----------------------------
-contoh sederhana
-$mahasiswa = [
-    "nama" => "Kalam", 
-    "nrp" => "203040123",
-    "email" => "kalam",
-    "jurusan" => "Teknik Informatika"
-];
+Variabel Scope / Lingkup Variabel
+Variabel yang berada diluar function sama yang didalam function itu ruang lingkupnya berbeda
+$x = 10; -> variabel lokal untuk halaman
 
-echo $mahasiswa["jurusan"];
+function tampilX() {
+    $x = 20; -> variabel lokal untuk function ini saja
+    global $x; -> ketika kita ganti dengan baris ini maka akan mencari variabel yang berada diluar function ini
+    echo $x;
+}
+
+tampilX();
+echo "<br>";
+echo $x;
 ---------------------------
-contoh multidimensi
-$mahasiswa = [
-    [
-        "nama" => "Kalam", 
-        "nrp" => "203040123", 
-        "jurusan" => "Teknik Informatika", 
-        "email" => "kalam@gmail.com"
-    ],
-    [
-        "nama" => "Zulfikar", 
-        "nrp" => "203010453", 
-        "jurusan" => "Teknik Industri", 
-        "email" => "zull@gmail.com"
-    ],
-    [
-        "nama" => "Ferdin", 
-        "nrp" => "203030111", 
-        "jurusan" => "Teknik Mesin", 
-        "email" => "din@gmail.com"
-    ]
-];
-            indexnya    indexnya string
-                \       |
-echo $mahasiswa[1]["nama"];
+Superglobal Variabel PHP 
+semuanya array assosiative
+$_GET -> datanya akan dikirim melalui url dan ditangkap dengan variabel superglobalnya
+$_POST ->
+$_REQUEST ->
+$_SESSION ->
+$_COOKIE ->
+$_SERVER ->
+$_ENV ->
 ---------------------------
 */
 
@@ -85,6 +71,7 @@ $films = [
         "gambar" => "avenger.jpg"
     ]
 ];
+
 ?>
 
 <!DOCTYPE html>
@@ -98,7 +85,7 @@ $films = [
 
 <h1>Daftar Film</h1>
 
-<?php foreach( $films as $film ) : ?>
+<!-- <?php foreach( $films as $film ) : ?>
     <ul>
         <li>
             <img src="gambar/<?= $film["gambar"]; ?>">
@@ -108,7 +95,15 @@ $films = [
         <li>Rilis : <?= $film["rilis"] ?></li>
         <li>Genre : <?= $film["genre"] ?></li>
     </ul>
-<?php endforeach ?>
+<?php endforeach ?> -->
+
+<ul>
+    <?php foreach( $films as $film ) : ?>
+        <li>
+        <a href="latihan2.php?judul=<?= $film["judul"] ?>&sutradara=<?= $film["sutradara"] ?>&rilis=<?= $film["rilis"] ?>&genre=<?= $film["genre"] ?>&gambar=<?= $film["gambar"]; ?>"><?= $film["judul"] ?></a>
+        </li>
+    <?php endforeach ?>
+</ul>
     
 </body>
 </html>

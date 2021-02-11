@@ -8,7 +8,7 @@ Kalam Mahardhika
 ---------------------------
 Teknik Informatika (D)
 ---------------------------
-Senin, 8 Februari 2021
+Kamis, 11 Februari 2021
 ---------------------------
 Pemrograman Web
 ---------------------------
