@@ -45,7 +45,7 @@ if (isset($_GET["cari"])) {
     <h4 class="text-center text-lg font-medium text-gray-500 uppercase tracking-wider mb-6">Data Semua Barang</h4>
     <div class="flex flex-col">
       <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+        <div class="py-2 mr-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
           <a href="tambah.php">
             <button type="button" class="mb-3 py-2 px-4 font-semibold rounded-lg shadow-md text-white text-sm bg-indigo-500 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               Add product
