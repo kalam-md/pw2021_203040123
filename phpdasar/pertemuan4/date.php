@@ -18,7 +18,7 @@ Pertemuan 4 - Function
 
 ?>
 
-<?php 
+<?php
 /* 
 ---------------------------
 BUILT IN FUNCTION -> FUNGSI PHP NYA SENDIRI
@@ -85,6 +85,5 @@ sleep
 Untuk memberhentikan sementara baris kode
 ---------------------------
 */
-\
 
 ?>
