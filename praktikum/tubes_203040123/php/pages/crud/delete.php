@@ -18,7 +18,7 @@ $id = $_GET['id'];
 
 if (delete($id) > 0) {
   echo "<script>
-          alert('data berhasil dihapus');
+        alert('Data berhasil dihapus');
           document.location.href = '../dashboard.php';
        </script>";
 } else {
